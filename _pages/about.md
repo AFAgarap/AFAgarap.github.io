@@ -8,9 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-About me
-========
-
 Hello!
 
 My name is Abien Fred Agarap and I am currently a Master of Science in Computer Science student at De La Salle University - Manila. I am also a [Junior Academy](https://www.nyas.org/programs/global-stem-alliance/the-junior-academy/) Mentor at the New York Academy of Sciences, where I mentor high school students from around the world.
