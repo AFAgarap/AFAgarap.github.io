@@ -81,13 +81,13 @@ analytics:
 author:
   name: "Abien Fred Agarap"
   avatar: "profile.png"
-  bio: "Your biography for the left-hand sidebar"
-  location: "Location"
+  bio: "MS Computer Science student at De La Salle University"
+  location: "Philippines"
   employer:
-  pubmed: "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar: "http://yourfullgooglescholarurl.com"
-  email:
-  researchgate: # example: "https://www.researchgate.net/profile/yourprofile"
+  pubmed: 
+  googlescholar: "https://scholar.google.com/citations?user=TA51jxUAAAAJ&hl=en"
+  email: "abien_agarap@dlsu.edu.ph"
+  researchgate: "https://www.researchgate.net/profile/Abien_Fred_Agarap"
   uri:
   bitbucket:
   codepen:
@@ -95,20 +95,20 @@ author:
   flickr:
   facebook:
   foursquare:
-  github: "academicpages"
+  github: "AFAgarap"
   google_plus:
   keybase:
-  instagram:
+  instagram: "afagarap"
   impactstory: #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm:
-  linkedin:
-  orcid: "http://orcid.org/yourorcidurl"
+  linkedin: "https://www.linkedin.com/in/abienfredagarap/"
+  orcid: "https://orcid.org/0000-0002-7247-8180"
   pinterest:
   soundcloud:
   stackoverflow: # http://stackoverflow.com/users/123456/username
   steam:
   tumblr:
-  twitter: "replacethistwitterhandle"
+  twitter: "afagarap"
   vine:
   weibo:
   xing:
