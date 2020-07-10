@@ -10,7 +10,7 @@ redirect_from:
 
 Hello!
 
-My name is Abien Fred Agarap and I am currently a Master of Science in Computer Science student at De La Salle University - Manila. I am also a Junior Academy Mentor at the New York Academy of Sciences, where I mentor high school students from around the world.
+My name is Abien Fred Agarap and I am currently a Master of Science in Computer Science student at De La Salle University - Manila, where I am currently being advised by Dr. Arnulfo P. Azcarraga.
 
 My research interests are the foundations of deep learning, game theory for deep learning, representation learning, and interpretability of machine learning. 
 
