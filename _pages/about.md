@@ -22,3 +22,11 @@ Representations**
 Abien Fred Agarap, Arnulfo P. Azcarraga (IJCNN 2020)
 
 **Abstract:** Deep clustering algorithms combine representation learning and clustering by jointly optimizing a clustering loss and a non-clustering loss. In such methods, a deep neural network is used for representation learning together with a clustering network. Instead of following this framework to improve clustering performance, we propose a simpler approach of optimizing the entanglement of the learned latent code representation of an autoencoder. We define entanglement as how close pairs of points from the same class or structure are, relative to pairs of points from different classes or structures. To measure the entanglement of data points, we use the soft nearest neighbor loss, and expand it by introducing an annealing temperature factor. Using our proposed approach, the test clustering accuracy was 96.2% on the MNIST dataset, 85.6% on the Fashion-MNIST dataset, and 79.2% on the EMNIST Balanced dataset, outperforming our baseline models.<br>**Link:** [arXiv.org](https://arxiv.org/abs/2006.04535)
+
+
+## Work Experience
+- **Augmented Intelligence Pros, Inc.**<br>Since August 2019
+- **Lead Research Scientist, Senti Techlabs Inc.**<br>August 2018 to July 2019
+- **Mentee, Google Deep Learning Camp 2018**<br>Jeju, South Korea -- June 2018 to August 2018
+- **Research Scientist, Senti Techlabs Inc.**<br>May 2018 to July 2018
+- **AI Developer Apprentice, Senti Techlabs Inc.**<br>December 2017 to March 2018
