@@ -2,7 +2,7 @@
 title: "On Breast Cancer Detection: An Application of Machine Learning Algorithms on the Wisconsin Diagnostic Dataset"
 collection: publications
 permalink: /publication/2017-11-20-wisconsin-breast-cancer
-excerpt: "An application of the gated recurrent neural network with SVM (GRNN-SVM) on the WDBC dataset."
+excerpt: "TLDR: An application of the gated recurrent neural network with SVM (GRNN-SVM) on the WDBC dataset."
 date: 2017-11-20
 venue: "arXiv.org"
 paperurl: "https://arxiv.org/abs/1711.07831"
