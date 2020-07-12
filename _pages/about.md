@@ -30,3 +30,21 @@ Abien Fred Agarap, Arnulfo P. Azcarraga (IJCNN 2020)
 - **Mentee, Google Deep Learning Camp 2018**<br>Jeju, South Korea -- June 2018 to August 2018
 - **Research Scientist, Senti Techlabs Inc.**<br>May 2018 to July 2018
 - **AI Developer Apprentice, Senti Techlabs Inc.**<br>December 2017 to March 2018
+
+
+## Projects
+
+These projects were done as a pastime and as course projects.
+
+**Statistical analysis on e-commerce reviews, with sentiment classification using bidirectional recurrent neural network (RNN)**<br>
+Performed statistical analysis and sentiment classification on [women's e-commerce clothing reviews dataset](https://www.kaggle.com/nicapotato/womens-ecommerce-clothing-reviews).<br>**Links:** [arXiv.org](https://arxiv.org/abs/1805.03687), [code](https://github.com/AFAgarap/ecommerce-reviews-analysis).
+
+**Towards building an intelligent anti-malware system: A deep learning approach using support vector machine (SVM) for malware classification**<br>
+Developed deep learning models with SVM as the classifier, and used them for malware classification.<br>**Links:** [arXiv.org](https://arxiv.org/abs/1801.00318), [code](https://github.com/AFAgarap/malware-classification)
+
+**An architecture combining convolutional neural network (CNN) and support vector machine (SVM) for image classification**<br>
+Used a CNN as a feature extractor, and a SVM as the classifier for the MNIST and Fashion-MNIST dataset.<br>**Links:** [arXiv.org](https://arxiv.org/abs/1712.03541), [code](https://github.com/AFAgarap/cnn-svm)
+
+
+**An application of machine learning algorithms on the Wisconsin diagnostic breast cancer (WDBC) dataset**<br>
+An application of the gated recurrent neural network with SVM (GRNN-SVM) on the WDBC dataset.<br>**Links:** [arXiv.org](https://arxiv.org/abs/1711.07831), [code](https://github.com/AFAgarap/wisconsin-breast-cancer)
