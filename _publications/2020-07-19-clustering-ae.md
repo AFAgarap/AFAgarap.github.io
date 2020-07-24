@@ -2,7 +2,7 @@
 title: "Improving k-Means Clustering Performance with Disentangled Internal Representations"
 collection: publications
 permalink: /publication/2020-07-19-clustering-ae
-excerpt: "TLDR: Preserved class neighbourhood structure of the dataset which improves clustering performance."
+excerpt: "TLDR: Preserve class neighbourhood structure of the dataset which improves clustering performance."
 date: 2020-07-20
 venue: "International Joint Conference on Neural Networks (IJCNN)"
 paperurl: "https://arxiv.org/abs/2006.04535"
