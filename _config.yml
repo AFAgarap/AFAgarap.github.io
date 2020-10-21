@@ -60,3 +60,4 @@ plugins:
 mathjax: true
 disqus:
     shortname: afagarap
+environment: production
