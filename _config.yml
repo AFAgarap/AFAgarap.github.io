@@ -62,3 +62,4 @@ mathjax: true
 disqus:
     shortname: afagarap
 environment: production
+google_analytics: UA-NNNNNNNN-N
