@@ -5,6 +5,8 @@ image: ../../../images/ae_mnist.png
 date: 2019-03-20
 ---
 
+> An autoencoder is a neural network designed to reconstruct input data which has a by-product of learning the most salient features of the data. We implement a feed-forward autoencoder network using TensorFlow 2.0 in this article.
+
 Google announced a major upgrade on the world’s most popular open-source machine learning library, TensorFlow, with a promise of focusing on simplicity and ease of use, eager execution, intuitive high-level APIs, and flexible model building on any platform.
 
 ![TF](../../../images/tf2-logo.gif)

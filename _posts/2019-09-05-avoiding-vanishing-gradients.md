@@ -4,6 +4,8 @@ title: "Avoiding the vanishing gradients problem using gradient noise addition"
 date: 2019-09-05
 ---
 
+> We add random noise to a network's gradients as an attempt to avoid the vanishing gradients problem.
+
 ## Introduction
 
 Neural networks are computational models used to approximate a function that models the relationship between the dataset features $x$ and labels $y$, i.e. $f(x) \approx y$. A neural net achieves this by learning the best parameters $\theta$ such that the difference between the prediction $f(x; \theta)$ and the label $y$ is minimal. They typically learn through gradient-based algorithms with the aid of backpropagation of errors observed at the output layer.
