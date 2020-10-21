@@ -1,4 +1,4 @@
-title: Your awesome title
+title: Abien Fred Agarap
 author:
   name: AFAgarap
   email: abien_agarap@dlsu.edu.ph
@@ -16,14 +16,14 @@ minima:
 
   # generate social links in footer
   social_links:
-    twitter: jekyllrb
-    github:  jekyll
+    twitter: afagarap
+    github:  afagarap
     # devto: jekyll
     # dribbble: jekyll
     # facebook: jekyll
     # flickr:   jekyll
-    # instagram: jekyll
-    # linkedin: jekyll
+    instagram: afagarap
+    linkedin: abienfredagarap
     # pinterest: jekyll
     # youtube: jekyll
     # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
