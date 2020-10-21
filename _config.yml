@@ -1,7 +1,7 @@
 title: Abien Fred Agarap
 author:
   name: AFAgarap
-  email: abien_agarap@dlsu.edu.ph
+  email: "abien_agarap@dlsu.edu.ph"
 description: > # this means to ignore newlines until "show_excerpts:"
   MS Computer Science student at De La Salle University
 show_excerpts: false # set to true to show excerpts on the homepage
@@ -16,6 +16,7 @@ minima:
   social_links:
     twitter: afagarap
     github:  afagarap
+    stackoverflow: "https://stackoverflow.com/users/6838049/afagarap"
     # devto: jekyll
     # dribbble: jekyll
     # facebook: jekyll
