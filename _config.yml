@@ -60,6 +60,6 @@ plugins:
 
 mathjax: true
 disqus:
-    shortname: afagarap-github.io
+    shortname: afagarap-github-io
 environment: production
 google_analytics: UA-NNNNNNNN-N
