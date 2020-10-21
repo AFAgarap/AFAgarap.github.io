@@ -4,7 +4,7 @@ title: "Avoiding the vanishing gradients problem using gradient noise addition"
 date: 2019-09-05
 ---
 
-> We add random noise to a network's gradients as an attempt to avoid the vanishing gradients problem.
+> We add random noise to a neural network's gradients as an attempt to avoid the vanishing gradients problem.
 
 ## Introduction
 
