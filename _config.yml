@@ -5,7 +5,8 @@ author:
 description: > # this means to ignore newlines until "show_excerpts:"
   MS Computer Science student at De La Salle University
 show_excerpts: false # set to true to show excerpts on the homepage
-url: afagarap.github.io
+baseurl: ""
+url: ""
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -61,5 +62,6 @@ plugins:
 mathjax: true
 disqus:
     shortname: afagarap-github-io
+url: https://afagarap.github.io
 environment: production
 google_analytics: UA-NNNNNNNN-N
