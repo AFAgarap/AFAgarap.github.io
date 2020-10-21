@@ -57,3 +57,5 @@ plugins:
  - jekyll-seo-tag
 
 mathjax: true
+disqus:
+    shortname: afagarap
