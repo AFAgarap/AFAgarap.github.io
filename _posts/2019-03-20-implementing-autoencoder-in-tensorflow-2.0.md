@@ -1,12 +1,13 @@
 ---
 layout: post
 title: "Implementing an Autoencoder in TensorFlow 2.0"
+image: ../../../images/ae_mnist.png
 date: 2019-03-20
 ---
 
 Google announced a major upgrade on the world’s most popular open-source machine learning library, TensorFlow, with a promise of focusing on simplicity and ease of use, eager execution, intuitive high-level APIs, and flexible model building on any platform.
 
-![TF](../../../../images/tf2-logo.gif)
+![TF](../../../images/tf2-logo.gif)
 
 This post is a humble attempt to contribute to the body of working TensorFlow 2.0 examples. Specifically, we shall discuss the subclassing API implementation of an autoencoder.
 
@@ -36,7 +37,7 @@ Now, an autoencoder is also a neural network. But instead of finding the functio
 
 Well, what’s interesting is what happens inside the autoencoder. Let’s bring up a graphical illustration of an autoencoder for an even better understanding.
 
-![](../../../../images/autoencoder.png)
+![](../../../images/autoencoder.png)
 
 From the illustration above, an autoencoder consists of two components: (1) an encoder which learns the data representation, i.e. the important features z of the data, and (2) a decoder which reconstructs the data based on its idea z of how it is structured.
 
@@ -55,7 +56,7 @@ The encoder (Eq. \ref{eq:encoder}) learns the data representation $z$ from the i
 
 The first component, the encoder, is similar to a conventional feed-forward network. However, it is not tasked on predicting values or labels. Instead, it is tasked to learn how the data is structured, i.e. data representation $z$.
 
-![](../../../../images/encoder.png)
+![](../../../images/encoder.png)
 
 The encoding is done by passing data input $x$ to the encoder’s hidden layer h in order to learn the data representation $z = f(h(x))$. We can implement the Encoder layer as follows,
 
@@ -86,7 +87,7 @@ Going through the code, the `Encoder` layer is defined to have a single hidden l
 
 The second component, the decoder, is also similar to a feed-forward network. However, instead of reducing data to a lower dimension, it reconstructs the data from its lower dimension representation $z$ to its original dimension $x$.
 
-![](../../../../images/decoder.png)
+![](../../../images/decoder.png)
 
 The decoding is done by passing the lower dimension representation $z$ to the decoder’s hidden layer $h$ in order to reconstruct the data to its original dimension $x = f(h(z))$. We can implement the decoder layer as follows,
 
@@ -228,3 +229,5 @@ The full code is available [here](https://gist.github.com/AFAgarap/326af55e36be0
 1. Martín Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen, Craig Citro, Greg S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin, Sanjay Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard, Rafal Jozefowicz, Yangqing Jia, Lukasz Kaiser, Manjunath Kudlur, Josh Levenberg, Dan Mané, Mike Schuster, Rajat Monga, Sherry Moore, Derek Murray, Chris Olah, Jonathon Shlens, Benoit Steiner, Ilya Sutskever, Kunal Talwar, Paul Tucker, Vincent Vanhoucke, Vijay Vasudevan, Fernanda Viégas, Oriol Vinyals, Pete Warden, Martin Wattenberg, Martin Wicke, Yuan Yu, and Xiaoqiang Zheng. TensorFlow: Large-scale machine learning on heterogeneous systems (2015). Software available from tensorflow.org.
 2. Francois Chollet, Building Autoencoders in Keras (2016, May 14), The Keras Blog.
 3. I. Goodfellow, Y. Bengio, & A. Courville, Deep learning (2016). MIT press.
+
+This article is also available at [Medium](https://towardsdatascience.com/implementing-an-autoencoder-in-tensorflow-2-0-5e86126e9f7).
