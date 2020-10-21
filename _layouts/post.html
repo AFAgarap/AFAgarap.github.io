@@ -2,7 +2,31 @@
 layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      tagSide: "right"
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+  MathJax.Hub.Register.StartupHook("TeX AMSmath Ready", function () {
+    MathJax.InputJax.TeX.Stack.Item.AMSarray.Augment({
+      clearTag() {
+        if (!this.global.notags) {
+          this.super(arguments).clearTag.call(this);
+        }
+      }
+    });
+  });
+</script>
+<script type="text/javascript" charset="utf-8"
+  src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
+</script>
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
