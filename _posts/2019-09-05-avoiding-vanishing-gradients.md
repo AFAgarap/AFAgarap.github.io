@@ -231,3 +231,5 @@ Recommended citation,
 * Neelakantan, Arvind, et al. “Adding gradient noise improves learning for very deep networks.” arXiv preprint arXiv:1511.06807 (2015).
 * Ioffe, Sergey, and Christian Szegedy. “Batch normalization: Accelerating deep network training by reducing internal covariate shift.” arXiv preprint arXiv:1502.03167 (2015).
 * LeCun, Yann, Corinna Cortes, and C. J. Burges. “MNIST handwritten digit database.” AT&T Labs [Online]. Available: http://yann.lecun.com/exdb/mnist (2010): 18.
+
+This article was originally published at [Medium](https://towardsdatascience.com/avoiding-the-vanishing-gradients-problem-96183fd03343).

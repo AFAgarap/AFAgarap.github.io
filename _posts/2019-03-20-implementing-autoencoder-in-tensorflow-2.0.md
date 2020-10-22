@@ -244,4 +244,4 @@ Recommended citation,
 2. Francois Chollet, Building Autoencoders in Keras (2016, May 14), The Keras Blog.
 3. I. Goodfellow, Y. Bengio, & A. Courville, Deep learning (2016). MIT press.
 
-This article is also available at [Medium](https://towardsdatascience.com/implementing-an-autoencoder-in-tensorflow-2-0-5e86126e9f7).
+This article was originally published at [Medium](https://towardsdatascience.com/implementing-an-autoencoder-in-tensorflow-2-0-5e86126e9f7).
