@@ -12,18 +12,18 @@ Neural networks are computational models used to approximate a function that mod
 
 <figure>
 <picture>
-<img src="../../../images/vanishing-gradients-dnn.png">
+<img src="https://miro.medium.com/max/1050/1*aMycR8vXJ-xXxnzS-WMXsA.png">
 </picture>
 <figcaption>Illustrated using NN-SVG. A feed-forward neural network with two hidden layers. It learns to approximate the target label $y$ by learning the appropriate $\theta$ parameters with the criteria of minimizing the difference between its output label $f(x; \theta)$ and target label $y$.</figcaption>
 </figure>
 
-With this learning paradigm, neural nets have produced promising results in several tasks such as image classification (Krizhevsky et al. (2012); He et al. (2015)), image generation (Brock et al. (2018); Goodfellow et al. (2014); Radford et al. (2015); Zhu et al. (2017)), language modelling (Devlin et al. (2018); Howard and Ruder (2018)), audio synthesis (Engel et al. (2019); Oord et al. (2016)), and image captioning (Vinyals et al. (2015); Xu et al. (2015)) among others. However, this dominance was not always the case for neural nets. Before its resurgence in 2012 by winning the ImageNet Challenge, training neural networks was notoriously difficult.
+With this learning paradigm, neural nets have produced promising results in several tasks such as image classification ([Krizhevsky et al. (2012)](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf); [He et al. (2015)](https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html)), image generation ([Brock et al. (2018)](https://arxiv.org/abs/1809.11096); [Goodfellow et al. (2014)](http://papers.nips.cc/paper/5423-generative-adversarial-nets); [Radford et al. (2015)](https://arxiv.org/abs/1511.06434); [Zhu et al. (2017)](https://openaccess.thecvf.com/content_iccv_2017/html/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.html)), language modelling ([Devlin et al. (2018)](https://arxiv.org/abs/1810.04805); [Howard and Ruder (2018)](https://arxiv.org/abs/1801.06146)), audio synthesis ([Engel et al. (2019)](https://arxiv.org/abs/1902.08710); [Oord et al. (2016)](https://arxiv.org/abs/1609.03499)), and image captioning ([Vinyals et al. (2015)](https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Vinyals_Show_and_Tell_2015_CVPR_paper.html); [Xu et al. (2015)](http://proceedings.mlr.press/v37/xuc15.pdf)) among others. However, this dominance was not always the case for neural nets. Before its resurgence in 2012 by winning the ImageNet Challenge, training neural networks was notoriously difficult.
 
-The difficulty was due to a number of issues, e.g. the compute power and data were not sufficient to harness the full potential of neural nets. To a large extent, this is because neural nets were sensitive to initial weights (Glorot and Bengio, 2010), and they tended to prematurely stop learning as gradient values decrease to infinitesimally small values (Hochreiter et al., 2001) due to any or both of the following reasons: (1) their activation functions have small ranges of gradient values, and (2) their depth. This phenomenon is called the vanishing gradients problem.
+The difficulty was due to a number of issues, e.g. the compute power and data were not sufficient to harness the full potential of neural nets. To a large extent, this is because neural nets were sensitive to initial weights ([Glorot and Bengio, 2010](http://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf?hc_location=ufi)), and they tended to prematurely stop learning as gradient values decrease to infinitesimally small values ([Hochreiter et al., 2001](https://www.bioinf.jku.at/publications/older/ch7.pdf)) due to any or both of the following reasons: (1) their activation functions have small ranges of gradient values, and (2) their depth. This phenomenon is called the vanishing gradients problem.
 
 The first reason of the problem mentioned above is our focus on this article. To reiterate in a different phrase, the vanishing gradient problem occurs when we train deep neural nets with gradient-based algorithms and backpropagation, where the gradients backpropagated through each hidden layer decrease to infinitesimally small values that the information necessary for the model to learn ceases to exist.
 
-Naturally, a number of solutions have been proposed to alleviate this problem, e.g. the use of different activation functions (Nair and Hinton, 2010), and the use of residual connections (He et al., 2016). In this article, we review a number of proposed solutions to the vanishing gradients problem in the form of activation functions, but we limit our architecture to a feed-forward neural network. We will also look at an experimental method that could help avoid the vanishing gradients problem, and that could also help them converge faster and better.
+Naturally, a number of solutions have been proposed to alleviate this problem, e.g. the use of different activation functions ([Nair and Hinton, 2010](https://www.cs.toronto.edu/~hinton/absps/reluICML.pdf)), and the use of residual connections ([He et al., 2016](https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html)). In this article, we review a number of proposed solutions to the vanishing gradients problem in the form of activation functions, but we limit our architecture to a feed-forward neural network. We will also look at an experimental method that could help avoid the vanishing gradients problem, and that could also help them converge faster and better.
 
 ## Gradient Noise Addition with Batch Normalization
 
@@ -42,7 +42,7 @@ The simplest neural net architecture would consist of hidden layers with a logis
 
 **Table 1. Activation functions used in neural nets, together with their respective derivatives, and maximum derivative values**
 
-For years, the prevailing solution for this problem was the use of hyperbolic tangent, having a maximum gradient value of 1 (see Table 1). However, the gradient values still saturate with this function, which may be visually verified as seen in Figure 1. Hence, the rectified linear units (ReLU) activation function was introduced (Nair and Hinton, 2010).
+For years, the prevailing solution for this problem was the use of hyperbolic tangent, having a maximum gradient value of 1 (see Table 1). However, the gradient values still saturate with this function, which may be visually verified as seen in Figure 1. Hence, the rectified linear units (ReLU) activation function was introduced ([Nair and Hinton, 2010](https://www.cs.toronto.edu/~hinton/absps/reluICML.pdf)).
 
 The ReLU activation function has the same maximum gradient value of 1, but its advantage over logistic and hyperbolic tangent functions is that its activation values do not get saturated. However, ReLU has its own disadvantage, i.e. with its minimum gradient value of 0, it triggers the problem of “dead neurons”, i.e. a neuron has no activation value. So, yes, even though it avoids the saturation for non-negative values, its negative values would trigger the dead neurons phenomenon.
 
@@ -50,14 +50,14 @@ Due to this drawback, among the variations of ReLU that was developed was Leaky 
 
 <figure>
 <picture>
-<img src="../../../images/vanishing-gradients-activation-functions.png">
+<img src="https://miro.medium.com/max/1050/1*Q-iyvAfd-ToACFDJjgdW0w.png">
 </picture>
 <figcaption>Figure 1. Plotted using matplotlib. Activation function values, their gradients, and their noise-augmented gradient values. For instance, adding Gaussian noise to the gradients of the logistic activation function increases its maximum value, i.e. from 0.25 to approximately 1.047831 (from a Gaussian distribution having a mean value of 0 and a standard deviation value of 0.5).</figcaption>
 </figure>
 
-But despite this modification, Ramachandran et al. (2017) claimed to have developed an even better function than ReLU, the “Swish” activation function. The aforementioned function could be described as a logistic-weighted linear function — it has a maximum gradient value of ~1.0998 (as it can also be seen in Table 1), and was found to outperform ReLU on CIFAR dataset (using ResNet), ImageNet dataset (using Inception and MobileNet), and machine translation (using a 12-layer Transformer model).
+But despite this modification, [Ramachandran et al. (2017)](https://arxiv.org/abs/1710.05941v1) claimed to have developed an even better function than ReLU, the “Swish” activation function. The aforementioned function could be described as a logistic-weighted linear function — it has a maximum gradient value of ~1.0998 (as it can also be seen in Table 1), and was found to outperform ReLU on CIFAR dataset (using ResNet), ImageNet dataset (using Inception and MobileNet), and machine translation (using a 12-layer Transformer model).
 
-While these solutions focused more on formulating a new activation to improve the learning of a neural network, the work of Neelakantan et al. (2015) introduced a simple but effective approach of improving the neural network performance. The approach was simply to add gradient noise to improve the learning of a very deep neural network (see Eq. 1). Not only does it improve the performance of a neural network, but it also helps to avoid the problem of overfitting. Although the authors did not explicitly state that their proposed solution was designed to alleviate the vanishing gradients problem, it could be seen this way since the gradients computed during training are inflated — thus helping to avoid saturated gradient values which lead to the vanishing gradients problem.
+While these solutions focused more on formulating a new activation to improve the learning of a neural network, the work of [Neelakantan et al. (2015)](https://arxiv.org/abs/1511.06807) introduced a simple but effective approach of improving the neural network performance. The approach was simply to add gradient noise to improve the learning of a very deep neural network (see Eq. 1). Not only does it improve the performance of a neural network, but it also helps to avoid the problem of overfitting. Although the authors did not explicitly state that their proposed solution was designed to alleviate the vanishing gradients problem, it could be seen this way since the gradients computed during training are inflated — thus helping to avoid saturated gradient values which lead to the vanishing gradients problem.
 
 \begin{equation}
 \nabla_{\theta_t} J := \nabla_{\theta_t} J + \mathcal{N}(0, \sigma_t^2)
@@ -69,7 +69,7 @@ The standard deviation $\sigma$ at time step t is then iteratively annealed by t
 \sigma_{t}^2 := \dfrac{\eta = 1}{(1 + t)^{\gamma=0.55}}
 \end{equation}
 
-In the original paper by Neelakantan et al. (2015), the $\eta$ parameter was chosen from {0.1, 1.0}, while the $\gamma$ parameter was set to 0.55 in all their experiments.
+In the original paper by [Neelakantan et al. (2015)](https://arxiv.org/abs/1511.06807), the $\eta$ parameter was chosen from {0.1, 1.0}, while the $\gamma$ parameter was set to 0.55 in all their experiments.
 
 TensorFlow 2.0 was used to implement the models and its computations for the experiments in this article. To implement the annealing gradient noise addition, we simply augment the gradients computed using tf.GradientTape by adding values from the Gaussian distribution generated with Eq. 1 and Eq. 2. That is, using tf.add as it can be seen in Line 7 from Snippet 1.
 
@@ -85,10 +85,10 @@ def train_step(model, loss, features, labels, epoch):
   return train_loss, gradients
 ```
 
-Finally, this approach was further augmented with the use of Batch Normalization (Ioffe and Szegedy, 2015). Thus, with this approach, the layer activations would be forced to take on unit Gaussian distribution during the beginning of a training session.
+Finally, this approach was further augmented with the use of Batch Normalization ([Ioffe and Szegedy, 2015](https://arxiv.org/abs/1502.03167)). Thus, with this approach, the layer activations would be forced to take on unit Gaussian distribution during the beginning of a training session.
 
 ## Empirical Results
-In the experiments that follow, the MNIST handwritten digits classification dataset (LeCun, Cortes, and Burges, 2010) was used for training and evaluating our neural networks. Each image was reshaped to a 784-dimensional vector, and then normalized by dividing each pixel value with the maximum pixel value (i.e. 255), and added random noise from a Gaussian distribution with a standard deviation of 5e-2 to elevate the difficulty to converge on the dataset.
+In the experiments that follow, the MNIST handwritten digits classification dataset ([LeCun, Cortes, and Burges, 2010](http://yann.lecun.com/exdb/mnist/)) was used for training and evaluating our neural networks. Each image was reshaped to a 784-dimensional vector, and then normalized by dividing each pixel value with the maximum pixel value (i.e. 255), and added random noise from a Gaussian distribution with a standard deviation of 5e-2 to elevate the difficulty to converge on the dataset.
 
 ### Improving Gradient Values
 During training, we can observe the gradient distributions of a neural network as it learns. In Figure 2, we take a neural network with logistic activation function as an example. Since the logistic activation function has the least maximum gradient value (i.e. 0.25), we can consider observing the changes in its gradient distribution to be noteworthy.
@@ -114,7 +114,6 @@ We can observe in Figures 3–6 that using the experimental methods, Gradient No
 <figcaption>Figure 3. Plotted using matplotlib. Training loss over time of the baseline and experimental (with GNA, and GNA + batch normalization) two-layered neural networks on the MNIST dataset.</figcaption>
 </figure>
 
-
 <figure>
 <picture>
 <img src="https://miro.medium.com/max/875/1*vtcpL0uGz51BuzRY76FBig.png">
@@ -122,12 +121,25 @@ We can observe in Figures 3–6 that using the experimental methods, Gradient No
 <figcaption>Figure 4. Plotted using matplotlib. Training accuracy over time of the baseline and experimental (with GNA, and GNA + batch normalization) two-layered neural networks on the MNIST dataset.</figcaption>
 </figure>
 
-<figure>
-<picture>
-<img src="https://miro.medium.com/max/875/1*rl7sVPtB7unZyyv-iECCzg.png">
-</picture>
-<figcaption>Table 2. Test accuracy of the baseline and experimental (with GNA, and GNA + batch normalization) two-layered neural networks on the MNIST dataset.</figcaption>
-</figure>
+|Model|Activation|Test Accuracy|
+|-----|----------|-------------|
+|Baseline|Logistic|65.12%|
+|GNA|Logistic|$75.05\%\ (\uparrow 9.93\%)$|
+|**GNA + BN**|**Logistic**|**$76.37\%\ (\uparrow 11.25\%)$**|
+|Baseline|TanH|91.12%|
+|GNA|TanH|$91.61\%\ (\uparrow 0.49\%)$|
+|**GNA + BN**|**TanH**|**$91.81\%\ (\uparrow 0.69\%)$**|
+|Baseline|ReLU|91.62%|
+|GNA|ReLU|$92.37\%\ (\uparrow 0.75\%)$|
+|**GNA + BN**|**ReLU**|**$92.49\%\ (\uparrow 0.87\%)$**|
+|Baseline|Leaky ReLU|91.38%|
+|GNA|Leaky ReLU|$92.02\%\ (\uparrow 0.64\%)$|
+|**GNA + BN**|**Leaky ReLU**|**$92.12\%\ (\uparrow 0.74\%)$**|
+|Baseline|Swish|89.95%|
+|GNA|Swish|$90.92\%\ (\uparrow 0.97\%)$|
+|**GNA + BN**|**Swish**|**$91.03\%\ (\uparrow 1.08\%)$**|
+
+**Table 2. Test accuracy of the baseline and experimental (with GNA, and GNA + batch normalization) two-layered neural networks on the MNIST dataset.**
 
 From Table 2, we can see the test accuracy values using GNA and GNA+BN drastically improved — most notably on the logistic-based neural network.
 
@@ -145,12 +157,25 @@ From Table 2, we can see the test accuracy values using GNA and GNA+BN drastical
 <figcaption>Figure 6. Plotted using matplotlib. Training accuracy over time of the baseline and experimental (with GNA, and GNA + batch normalization) five-layered neural networks on the MNIST dataset.</figcaption>
 </figure>
 
-<figure>
-<picture>
-<img src="https://miro.medium.com/max/875/1*vU29lPlif7LYg9gJ3NJtCg.png">
-</picture>
-<figcaption>Table 3. Test accuracy of the baseline and experimental (with GNA, and GNA + batch normalization) five-layered neural networks on the MNIST dataset.</figcaption>
-</figure>
+|Model|Activation|Test Accuracy|
+|-----|----------|-------------|
+|Baseline|Logistic|10.28%|
+|**GNA**|**Logistic**|**$11.35\%\ (\uparrow 1.07\%)$**|
+|GNA + BN|Logistic|11.35%|
+|Baseline|TanH|91.27%|
+|GNA|TanH|$91.78\%\ (\uparrow 0.51\%)$|
+|**GNA + BN**|**TanH**|**$92.15\%\ (\uparrow 0.88\%)$**|
+|**Baseline**|**ReLU**|**88.65%**|
+|GNA|ReLU|$83.62\%\ (\downarrow 5.03\%)$|
+|GNA + BN|ReLU|$84.40\%\ (\downarrow 4.25\%)$|
+|Baseline|Leaky ReLU|90.43%|
+|GNA|Leaky ReLU|$83.34\%\ (\downarrow 7.09\%)$|
+|**GNA + BN**|**Leaky ReLU**|**$92.31\%\ (\uparrow 1.88\%)$**|
+|Baseline|Swish|37.18%|
+|GNA|Swish|$83.10\%\ (\uparrow 45.92\%)$|
+|**GNA + BN**|**Swish**|**$91.65\%\ (\uparrow 54.47\%)$**|
+         
+**Table 3. Test accuracy of the baseline and experimental (with GNA, and GNA + batch normalization) five-layered neural networks on the MNIST dataset.**
 
 We have seen that all the baseline two-layered neural networks improved with GNA and GNA+BN from the results tallied in Table 2. However, for the five-layered neural networks (see Table 3), the ReLU-based model failed to improve in terms of test accuracy. Furthermore, we can see that the TanH-based neural network had a better test accuracy in this configuration than the ReLU-based model. We can attribute this to the fact that we used Xavier initialization (in which TanH performs optimally) rather than He initialization (in which ReLU performs optimally).
 
