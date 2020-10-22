@@ -198,6 +198,18 @@ The full code is available [here](https://github.com/afagarap/vanishing-gradient
 
 If you enjoyed reading this article, perhaps you will also find my blog on [Implementing an Autoencoder in TensorFlow 2.0](https://afagarap.github.io/2019/03/20/implementing-autoencoder-in-tensorflow-2.0.html) interesting!
 
+Recommended citation,
+
+```
+@article{agarap2019avoiding,
+    title="Avoiding the vanishing gradients problem using gradient noise addition",
+    author="Agarap, Abien Fred",
+    journal="afagarap.github.io",
+    year="2019",
+    url="https://afagarap.github.io/2019/09/05/avoiding-vanishing-gradients.html"
+}
+```
+
 ### References
 
 * Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. “Imagenet classification with deep convolutional neural networks.” Advances in neural information processing systems. 2012.
