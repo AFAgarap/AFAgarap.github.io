@@ -54,6 +54,12 @@ layout: default
     {{ content }}
   </div>
 
+  <span>[
+      {% for tag in page.tags %}
+        {% capture tag_name %}{{ tag }}{% endcapture %}
+        <a href="/tag/{{ tag_name }}"><code class="highlighter-rouge"><nobr>{{ tag_name }}</code>&nbsp;</a>
+      {% endfor %}
+      ]</span>
   {% include share.html %}
 
   {%- if site.disqus.shortname -%}
