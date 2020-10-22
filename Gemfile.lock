@@ -70,6 +70,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
+  jekyll-seo-tag
   jekyll-sitemap
   minima!
 
