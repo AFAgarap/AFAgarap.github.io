@@ -196,9 +196,13 @@ Our exploration in this article is only the tip of the iceberg as there are a lo
 
 I hope we have covered enough in this article to make you wonder more about the vanishing gradients problem and about the different ways to help avoid it.
 
+---
+
 The full code is available [here](https://github.com/afagarap/vanishing-gradients). In case you have any feedback, you may reach me through [Twitter](https://twitter.com/afagarap). We can also connect through [LinkedIn](https://linkedin.com/in/abienfredagarap)!
 
 If you enjoyed reading this article, perhaps you will also find my blog on [Implementing an Autoencoder in TensorFlow 2.0](https://afagarap.github.io/2019/03/20/implementing-autoencoder-in-tensorflow-2.0.html) interesting!
+
+---
 
 Recommended citation,
 

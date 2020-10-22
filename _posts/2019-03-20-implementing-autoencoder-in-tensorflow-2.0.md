@@ -230,6 +230,8 @@ Autoencoders are quite useful for dimensionality reduction. But it could also be
 
 The full code is available [here](https://gist.github.com/AFAgarap/326af55e36be0529c507f1599f88c06e).
 
+---
+
 Recommended citation,
 
 ```
