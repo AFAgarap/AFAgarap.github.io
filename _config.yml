@@ -40,3 +40,4 @@ disqus:
 url: https://afagarap.github.io
 environment: production
 google_analytics: G-1C7EW56NXB
+highlighter: rouge
