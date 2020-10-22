@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Avoiding the vanishing gradients problem using gradient noise addition"
+tags: tensorflow neural-networks vanishing-gradients
+description: "We add random noise to a neural network's gradients as an attempt to avoid the vanishing gradients problem."
 date: 2019-09-05
 ---
 

@@ -2,6 +2,8 @@
 layout: post
 title: "Implementing an Autoencoder in TensorFlow 2.0"
 image: ../../../images/ae_mnist.png
+description: "An autoencoder is a neural network designed to reconstruct input data which has a by-product of learning the most salient features of the data. We implement a feed-forward autoencoder network using TensorFlow 2.0 in this article."
+tags: tutorial tensorflow neural-networks autoencoder
 date: 2019-03-20
 ---
 
@@ -15,15 +17,15 @@ This post is a humble attempt to contribute to the body of working TensorFlow 2.
 
 To install TensorFlow 2.0, use the following `pip install` command,
 
-```
+{% highlight shell %}
 pip install tensorflow==2.0.0
-```
+{% endhighlight %}
 
 or if you have a GPU in your system,
 
-```
+{% highlight shell %}
 pip install tensorflow-gpu==2.0.0
-```
+{% endhighlight %}
 
 More details on its installation through this guide from tensorflow.org.
 
@@ -62,7 +64,7 @@ The first component, the encoder, is similar to a conventional feed-forward netw
 
 The encoding is done by passing data input $x$ to the encoder’s hidden layer h in order to learn the data representation $z = f(h(x))$. We can implement the Encoder layer as follows,
 
-```python
+{% highlight python %}
 class Encoder(tf.keras.layers.Layer):
   def __init__(self, intermediate_dim):
     super(Encoder, self).__init__()
@@ -79,7 +81,7 @@ class Encoder(tf.keras.layers.Layer):
   def call(self, input_features):
     activation = self.hidden_layer(input_features)
     return self.output_layer(activation)
-```
+{% endhighlight %}
 
 We first define an `Encoder` class that inherits the `tf.keras.layers.Layer` to define it as a layer instead of a model. Why a layer instead of a model? Recall that the encoder is a component of the autoencoder model.
 
@@ -93,7 +95,7 @@ The second component, the decoder, is also similar to a feed-forward network. Ho
 
 The decoding is done by passing the lower dimension representation $z$ to the decoder’s hidden layer $h$ in order to reconstruct the data to its original dimension $x = f(h(z))$. We can implement the decoder layer as follows,
 
-```python
+{% highlight python %}
 class Decoder(tf.keras.layers.Layer):
   def __init__(self, intermediate_dim, original_dim):
     super(Decoder, self).__init__()
@@ -110,7 +112,7 @@ class Decoder(tf.keras.layers.Layer):
   def call(self, code):
     activation = self.hidden_layer(code)
     return self.output_layer(activation)
-```
+{% endhighlight %}
 
 We define a `Decoder` class that also inherits the `tf.keras.layers.Layer`.
 
@@ -122,7 +124,7 @@ Now that we have defined the components of our autoencoder, we can finally build
 
 We can now build the autoencoder model by instantiating the `Encoder` and the `Decoder` layers.
 
-```python
+{% highlight python %}
 class Autoencoder(tf.keras.Model):
   def __init__(self, intermediate_dim, original_dim):
     super(Autoencoder, self).__init__()
@@ -133,7 +135,7 @@ class Autoencoder(tf.keras.Model):
     code = self.encoder(input_features)
     reconstructed = self.decoder(code)
     return reconstructed
-```
+{% endhighlight %}
 
 As we discussed above, we use the output of the encoder layer as the input to the decoder layer. So, that’s it? No, not exactly.
 
@@ -141,25 +143,27 @@ To this point, we have only discussed the components of an autoencoder and how t
 
 Like other neural networks, an autoencoder learns through backpropagation. However, instead of comparing the values or labels of the model, we compare the reconstructed data $\hat{x}$ and the original data $x$. Let’s call this comparison the reconstruction error function, and it is given by the following equation,
 
-$$ L = \dfrac{1}{n} \sum_{i=0}^{n-1} \left(\hat{x}_{i} - x_{i}\right)^{2} $$ 
+\begin{equation}
+L = \dfrac{1}{n} \sum_{i=0}^{n-1} (\hat{x}_i - x_i)^{2}
+\end{equation}
 
 In TensorFlow, the above equation could be expressed as follows,
 
-```python
+{% highlight python %}
 def loss(model, original):
   reconstruction_error = tf.reduce_mean(tf.square(tf.subtract(model(original), original)))
   return reconstruction_error
-```
+{% endhighlight %}
 
 Are we there yet? Close enough. Just a few more things to add. Now that we have our error function defined, we can finally write the training function for our model.
 
-```python
+{% highlight python %}
 def train(loss, model, opt, original):
   with tf.GradientTape() as tape:
     gradients = tape.gradient(loss(model, original), model.trainable_variables)
     gradient_variables = zip(gradients, model.trainable_variables)
     opt.apply_gradients(gradient_variables)
-```
+{% endhighlight %}
 
 This way of implementing backpropagation affords us with more freedom by enabling us to keep track of the gradients, and the application of an optimization algorithm to them.
 
@@ -177,7 +181,7 @@ But before doing so, let’s instantiate an `Autoencoder` class that we defined 
 
 We can visualize our training results by using TensorBoard, and to do so, we need to define a summary file writer for the results by using `tf.summary.create_file_writer`.
 
-```python
+{% highlight python %}
 autoencoder = Autoencoder(intermediate_dim=64, original_dim=784)
 opt = tf.optimizers.Adam(learning_rate=learning_rate)
 
@@ -204,7 +208,7 @@ with writer.as_default():
         tf.summary.scalar('loss', loss_values, step=step)
         tf.summary.image('original', original, max_outputs=10, step=step)
         tf.summary.image('reconstructed', reconstructed, max_outputs=10, step=step)
-```
+{% endhighlight %}
 
 Next, we use the defined summary file writer, and record the training summaries using `tf.summary.record_if`.
 
