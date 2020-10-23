@@ -2,9 +2,11 @@
 layout: post
 title: "Installing TensorFlow GPU in Ubuntu 20.04"
 tags: tensorflow tutorial
-description: "A short guide for installing TensorFlow GPU and its prerequisite packages."
+description: "A short guide for installing TensorFlow GPU and its prerequisite packages in Ubuntu 20.04."
 date: 2020-07-26
 ---
+
+> A short guide for installing TensorFlow GPU and its prerequisite packages in Ubuntu 20.04.
 
 When Ubuntu publishes a long-term support (LTS) release, I usually wait for a while before upgrading, mainly because I’m waiting for CUDA and cuDNN support for the new release. This time, it only took me three months to migrate from Ubuntu 18.04 to Ubuntu 20.04 — well, technically an Ubuntu-based distro, i.e. Regolith Linux. My decision to do so was simply because I upgraded my SSD from 120GB to 1TB, and so I migrated to a different OS as well— albeit just an Ubuntu derivative.
 
