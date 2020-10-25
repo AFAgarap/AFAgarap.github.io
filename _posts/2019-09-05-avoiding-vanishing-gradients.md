@@ -59,33 +59,23 @@ Due to this drawback, among the variations of ReLU that was developed was Leaky 
 
 But despite this modification, [Ramachandran et al. (2017)](https://arxiv.org/abs/1710.05941v1) claimed to have developed an even better function than ReLU, the “Swish” activation function. The aforementioned function could be described as a logistic-weighted linear function — it has a maximum gradient value of ~1.0998 (as it can also be seen in Table 1), and was found to outperform ReLU on CIFAR dataset (using ResNet), ImageNet dataset (using Inception and MobileNet), and machine translation (using a 12-layer Transformer model).
 
-While these solutions focused more on formulating a new activation to improve the learning of a neural network, the work of [Neelakantan et al. (2015)](https://arxiv.org/abs/1511.06807) introduced a simple but effective approach of improving the neural network performance. The approach was simply to add gradient noise to improve the learning of a very deep neural network (see Eq. 1). Not only does it improve the performance of a neural network, but it also helps to avoid the problem of overfitting. Although the authors did not explicitly state that their proposed solution was designed to alleviate the vanishing gradients problem, it could be seen this way since the gradients computed during training are inflated — thus helping to avoid saturated gradient values which lead to the vanishing gradients problem.
+While these solutions focused more on formulating a new activation to improve the learning of a neural network, the work of [Neelakantan et al. (2015)](https://arxiv.org/abs/1511.06807) introduced a simple but effective approach of improving the neural network performance. The approach was simply to add gradient noise to improve the learning of a very deep neural network (see Eq. \ref{eq:gna}). Not only does it improve the performance of a neural network, but it also helps to avoid the problem of overfitting. Although the authors did not explicitly state that their proposed solution was designed to alleviate the vanishing gradients problem, it could be seen this way since the gradients computed during training are inflated — thus helping to avoid saturated gradient values which lead to the vanishing gradients problem.
 
-\begin{equation}
+\begin{equation}\label{eq:gna}
 \nabla_{\theta_t} J := \nabla_{\theta_t} J + \mathcal{N}(0, \sigma_t^2)
 \end{equation}
 
 The standard deviation $\sigma$ at time step t is then iteratively annealed by the following equation,
 
-\begin{equation}
+\begin{equation}\label{eq:annealing}
 \sigma_{t}^2 := \dfrac{\eta = 1}{(1 + t)^{\gamma=0.55}}
 \end{equation}
 
 In the original paper by [Neelakantan et al. (2015)](https://arxiv.org/abs/1511.06807), the $\eta$ parameter was chosen from {0.1, 1.0}, while the $\gamma$ parameter was set to 0.55 in all their experiments.
 
-TensorFlow 2.0 was used to implement the models and its computations for the experiments in this article. To implement the annealing gradient noise addition, we simply augment the gradients computed using tf.GradientTape by adding values from the Gaussian distribution generated with Eq. 1 and Eq. 2. That is, using tf.add as it can be seen in Line 7 from Snippet 1.
+TensorFlow 2.0 was used to implement the models and its computations for the experiments in this article. To implement the annealing gradient noise addition, we simply augment the gradients computed using `tf.GradientTape` by adding values from the Gaussian distribution generated with Eq. \ref{eq:gna} and Eq. \ref{eq:annealing}. That is, using `tf.add` as it can be seen in Line 7 from the following code snippet,
 
-```python
-def train_step(model, loss, features, labels, epoch):
-  with tf.GradientTape() as tape:
-    logits = model(features)
-    train_loss = loss(logits, labels)
-  gradients = tape.gradient(train_loss, model.trainable_variables)
-  stddev = 1 / ((1 + epoch)**0.55)
-  gradients = [tf.add(gradient, tf.random.normal(stddev=stddev, mean=0., shape=gradient.shape)) for gradient in gradients]
-  model.optimizer.apply_gradients(zip(gradients, model.trainable_variables))
-  return train_loss, gradients
-```
+<script src="https://gist.github.com/AFAgarap/3f6b7ada1b075d3f8810c5d116e7c0e4.js"></script>
 
 Finally, this approach was further augmented with the use of Batch Normalization ([Ioffe and Szegedy, 2015](https://arxiv.org/abs/1502.03167)). Thus, with this approach, the layer activations would be forced to take on unit Gaussian distribution during the beginning of a training session.
 
