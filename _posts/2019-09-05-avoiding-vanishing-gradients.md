@@ -52,7 +52,7 @@ Due to this drawback, among the variations of ReLU that was developed was Leaky 
 
 <figure>
 <picture>
-<img src="https://miro.medium.com/max/1050/1*Q-iyvAfd-ToACFDJjgdW0w.png">
+<img src="https://miro.medium.com/max/875/1*QxeovtXvUEphj5utRE0jxQ.png">
 </picture>
 <figcaption>Figure 1. Plotted using matplotlib. Activation function values, their gradients, and their noise-augmented gradient values. For instance, adding Gaussian noise to the gradients of the logistic activation function increases its maximum value, i.e. from 0.25 to approximately 1.047831 (from a Gaussian distribution having a mean value of 0 and a standard deviation value of 0.5).</figcaption>
 </figure>
