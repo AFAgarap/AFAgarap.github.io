@@ -236,7 +236,7 @@ Recommended citation,
 
 ```
 @article{agarap2019implementing
-    title="Implementing Autoencoder in TensorFlow 2.0",
+    title="Implementing an Autoencoder in TensorFlow 2.0",
     author="Agarap, Abien Fred",
     journal="afagarap.github.io",
     year="2019",
