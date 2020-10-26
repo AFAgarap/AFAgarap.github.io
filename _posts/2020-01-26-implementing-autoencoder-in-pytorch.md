@@ -100,6 +100,20 @@ I hope this has been a clear tutorial on implementing an autoencoder in PyTorch.
 
 The corresponding notebook to this article is available [here](https://gist.github.com/AFAgarap/4f8a8d8edf352271fa06d85ba0361f26). In case you have any feedback, you may reach me through [LinkedIn](http://linkedin.com/in/abienfredagarap).
 
+---
+
+Recommended citation,
+
+```
+@article{agarap2020implementing
+    title="Implementing an Autoencoder in PyTorch",
+    author="Agarap, Abien Fred",
+    journal="afagarap.github.io",
+    year="2020",
+    url="https://afagarap.github.io/2020/01/26/implementing-autoencoder-in-pytorch.html"
+}
+```
+
 ### References
 - A.F. Agarap, Implementing an Autoencoder in TensorFlow 2.0 (2019). Towards Data Science.
 - I. Goodfellow, Y. Bengio, & A. Courville, Deep learning (2016). MIT press.
