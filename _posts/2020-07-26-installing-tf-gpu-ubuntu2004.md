@@ -130,3 +130,5 @@ You can now enjoy using TensorFlow for your deep learning projects! Hooray!
 If you are looking for a TensorFlow project to work on, perhaps you will find my blog on [Implementing Autoencoder in TensorFlow 2.0](https://afagarap.github.io/2019/03/20/implementing-autoencoder-in-tensorflow-2.0.html) enjoyable!
 
 Also, if you enjoyed this article, perhaps you will enjoy my [other blogs](https://medium.com/@afagarap) as well!
+
+This article was originally published at [Medium](https://towardsdatascience.com/installing-tensorflow-gpu-in-ubuntu-20-04-4ee3ca4cb75d).

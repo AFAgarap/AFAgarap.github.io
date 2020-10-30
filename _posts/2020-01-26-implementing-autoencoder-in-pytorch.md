@@ -119,3 +119,5 @@ Recommended citation,
 - I. Goodfellow, Y. Bengio, & A. Courville, Deep learning (2016). MIT press.
 - A. Paszke, et al. PyTorch: An imperative style, high-performance deep learning library (2019). Advances in Neural Information Processing Systems.
 - PyTorch Documentation. https://pytorch.org/docs/stable/nn.html.
+
+This article was originally published at [Medium](https://medium.com/pytorch/implementing-an-autoencoder-in-pytorch-19baa22647d1).
