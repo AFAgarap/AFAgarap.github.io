@@ -8,7 +8,7 @@ Hello! My name is Abien Fred Agarap and I am currently a Master of Science in Co
 
 My research interests are the foundations of deep learning, game theory for deep learning, representation learning, and interpretability of machine learning. 
 
-You can know a bit more about me below. If you are interested in communicating with me, my e-mail address is abien_agarap[at]dlsu.edu.ph. Thank you for visiting!
+You can know a bit more about me below. If you are interested in communicating with me, my e-mail address is abienfred.agarap[at]gmail.com. Thank you for visiting!
 
 
 ## Latest Publication
