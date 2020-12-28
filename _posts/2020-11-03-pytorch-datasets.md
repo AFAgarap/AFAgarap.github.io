@@ -15,8 +15,10 @@ So, I decided to write my own Python library for loading datasets and creating
 data loaders for them, that I can reuse in my projects. I use image
 classification datasets for most of the models I try to learn, and/or to modify or
 improve. Hence, I started filling in my library with the standard image
-classification datasets such as MNIST, Fashion-MNIST, EMNIST-Balanced, CIFAR10,
-and SVHN.
+classification datasets such as [MNIST](https://pytorch.org/docs/stable/torchvision/datasets.html#mnist), [Fashion-MNIST](https://pytorch.org/docs/stable/torchvision/datasets.html#fashion-mnist), [EMNIST-Balanced](https://pytorch.org/docs/stable/torchvision/datasets.html#emnist), [CIFAR10](https://pytorch.org/docs/stable/torchvision/datasets.html#cifar),
+and [SVHN](https://pytorch.org/docs/stable/torchvision/datasets.html#svhn). But
+in case I wanted to use other datasets, I started adding in non-image
+classification datasets such as [AG News]
 
 {% highlight python %}
 from pt_datasets import load_dataset, create_dataloader
