@@ -37,7 +37,15 @@ the dataset used. However, in deep learning, this is not the case since the
 feature representations are **learned** as an **implicit task** of a **neural network**.
 
 ### Deep Clustering
-And so, recent works such as Deep Embedding Clustering or DEC and Variational Deep Embedding or VADE in 2016, and ClusterGAN in 2018, took advantage of the feature representation learning capability of neural networks. I will not be able to properly discuss them due to time constraints, but the fundamental idea among these works is essentially the same, and that is to simultaneously learn the feature representations and the cluster assignments using a deep neural network. This approach is known as deep clustering.
+And so, recent works such as [Deep Embedding Clustering or
+DEC](https://arxiv.org/abs/1511.06335) and [Variational
+Deep Embedding or VADE](https://arxiv.org/abs/1611.05148) in 2016, and [ClusterGAN](https://arxiv.org/abs/1809.03627) in 2018, took advantage of the
+feature representation learning capability of neural networks.
+
+We will not discuss them in detail in this article, but the **fundamental
+idea** among these works is **essentially** the **same**, and that is to **simultaneously learn**
+the feature **representations** and the **cluster assignments** using a deep neural
+network. This approach is known as **deep clustering**.
 
 ## Motivation
 Although deep clustering methods learn the clustering assignment together with feature representations, what they do not explicitly set out to do is to preserve the class neighbourhood structure of the dataset. This serves as our motivation for our research, and that is can we preserve the class neighbourhood structure of the dataset and then perform clustering on the learned representation of a deep network.
