@@ -17,7 +17,11 @@ learning means the **distance among class-similar data points** are **minimized*
 
 ![](../../../images/background-disentanglement.png)
 
-In doing so, it would preserve the underlying class neighborhood structure of the dataset, i.e. how data points reside in the feature space as a function of their classes or labels. If the class neighborhood structure is preserved, we would have a feature representation space in which a nearest neighbor classifier or a clustering algorithm would perform well.
+In doing so, it would **preserve** the **class memberships** of the **examples** from the
+dataset, i.e. how **data points reside** in the **feature space** as a **function of
+their classes or labels**. If the **class memberships** are **preserved**, we would have
+a feature representation space in which a nearest neighbor classifier or a
+clustering algorithm would perform well.
 
 ### Clustering
 Clustering is a machine learning task that finds the grouping of data points wherein the points in a group share more similarities among themselves relative to points in a different group. Like other machine learning algorithms, the success of clustering algorithms relies on the choice of feature representation. One representation may be superior than another with respect to the dataset used. However, in deep learning, this is not the case since the feature representations are learned as an implicit task of a neural network.
