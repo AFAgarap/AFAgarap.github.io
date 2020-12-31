@@ -42,6 +42,15 @@ DEC](https://arxiv.org/abs/1511.06335) and [Variational
 Deep Embedding or VADE](https://arxiv.org/abs/1611.05148) in 2016, and [ClusterGAN](https://arxiv.org/abs/1809.03627) in 2018, took advantage of the
 feature representation learning capability of neural networks.
 
+<figure>
+<picture>
+<img src="../../../images/dec.png">
+</picture>
+<center>
+<figcaption>Figure from DEC (Xie et al., 2016). The network structure of DEC. </figcaption>
+</center>
+</figure>
+
 We will not discuss them in detail in this article, but the **fundamental
 idea** among these works is **essentially** the **same**, and that is to **simultaneously learn**
 the feature **representations** and the **cluster assignments** using a deep neural
