@@ -57,6 +57,10 @@ the feature **representations** and the **cluster assignments** using a deep neu
 network. This approach is known as **deep clustering**.
 
 ## Motivation
+
+> Can we preserve the class memberships of the data points in the dataset
+> before clustering?
+
 Although deep clustering methods learn the clustering assignment together with feature representations, what they do not explicitly set out to do is to preserve the class neighbourhood structure of the dataset. This serves as our motivation for our research, and that is can we preserve the class neighbourhood structure of the dataset and then perform clustering on the learned representation of a deep network.
 
 In 2019, the Not Too Deep or N2D Clustering method was proposed wherein they learned a latent code representation of a dataset, in which they further searched for an underlying manifold using techniques such as t-SNE, Isomap, and UMAP. The resulting manifold is a clustering-friendly representation of the dataset. So, after manifold learning, they used the learned manifold as the dataset features for clustering. Using this approach, they were able to have a good clustering performance. The N2D is a relatively simpler approach compared to deep clustering algorithms, and we propose a similar approach.
