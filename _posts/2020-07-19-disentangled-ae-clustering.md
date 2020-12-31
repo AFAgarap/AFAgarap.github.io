@@ -9,11 +9,11 @@ date: 2020-07-19
 
 ## Background
 
-In the context of our work, we define disentanglement as how far
-class-different data points from each other are, relative to class-similar data
-points. This is similar to the way the aforementioned term was treated in
-[Frosst et al. (2019)](https://arxiv.org/abs/1902.01889) So, maximizing disentanglement during representation
-learning means the distance among class-similar data points are minimized.
+In the context of our work, we define **disentanglement** as **how far
+class-different data points from each other are**, **relative to class-similar data
+points**. This is similar to the way the aforementioned term was treated in
+[Frosst et al. (2019)](https://arxiv.org/abs/1902.01889) So, **maximizing disentanglement** during representation
+learning means the **distance among class-similar data points** are **minimized**.
 
 ![](../../../images/background-disentanglement.png)
 
