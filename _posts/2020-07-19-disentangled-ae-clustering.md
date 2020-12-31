@@ -24,7 +24,17 @@ a feature representation space in which a nearest neighbor classifier or a
 clustering algorithm would perform well.
 
 ### Clustering
-Clustering is a machine learning task that finds the grouping of data points wherein the points in a group share more similarities among themselves relative to points in a different group. Like other machine learning algorithms, the success of clustering algorithms relies on the choice of feature representation. One representation may be superior than another with respect to the dataset used. However, in deep learning, this is not the case since the feature representations are learned as an implicit task of a neural network.
+Clustering is a machine learning task that finds the **grouping** of **data points**
+wherein the **points in a group share more similarities** among themselves relative
+to points in a different group.
+
+![](../../../images/clustering.png)
+
+Like other machine learning algorithms, the
+success of clustering algorithms relies on the choice of **feature
+representation**. One representation may be superior than another with respect to
+the dataset used. However, in deep learning, this is not the case since the
+feature representations are **learned** as an **implicit task** of a **neural network**.
 
 ### Deep Clustering
 And so, recent works such as Deep Embedding Clustering or DEC and Variational Deep Embedding or VADE in 2016, and ClusterGAN in 2018, took advantage of the feature representation learning capability of neural networks. I will not be able to properly discuss them due to time constraints, but the fundamental idea among these works is essentially the same, and that is to simultaneously learn the feature representations and the cluster assignments using a deep neural network. This approach is known as deep clustering.
