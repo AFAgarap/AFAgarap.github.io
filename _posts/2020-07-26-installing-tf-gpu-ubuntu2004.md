@@ -108,7 +108,7 @@ $ source ~/.bashrc
 After installing the prerequisite packages, you can finally install TensorFlow 2.0,
 
 {% highlight shell %}
-$ pip install tensorflow
+$ pip install tensorflow==2.2.0
 {% endhighlight %}
 
 The `tensorflow` package now includes GPU support by default as opposed to the old days that we need to install `tensorflow-gpu` specifically.
