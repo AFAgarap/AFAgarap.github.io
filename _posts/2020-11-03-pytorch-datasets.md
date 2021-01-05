@@ -18,7 +18,7 @@ improve. Hence, I started filling in my library with the standard image
 classification datasets such as [MNIST](https://pytorch.org/docs/stable/torchvision/datasets.html#mnist), [Fashion-MNIST](https://pytorch.org/docs/stable/torchvision/datasets.html#fashion-mnist), [EMNIST-Balanced](https://pytorch.org/docs/stable/torchvision/datasets.html#emnist), [CIFAR10](https://pytorch.org/docs/stable/torchvision/datasets.html#cifar),
 and [SVHN](https://pytorch.org/docs/stable/torchvision/datasets.html#svhn). But
 in case I wanted to use other datasets, I started adding in non-image
-classification datasets such as [AG News](http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html), [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/)
+classification datasets such as [AG News](http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html), [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/), and [Malware Classification](https://github.com/AFAgarap/malware-classification).
 
 {% highlight python %}
 from pt_datasets import load_dataset, create_dataloader
