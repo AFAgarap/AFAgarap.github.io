@@ -84,3 +84,13 @@ for index in range(len(classes)):
 plt.legend(loc="upper center", title="Fashion-MNIST classes", ncol=5)
 plt.show()
 {% endhighlight %}
+
+<figure>
+<picture>
+<img src="../../../images/tsne_fashion_mnist.png">
+</picture>
+<center>
+<figcaption>A 2D visualization of Fashion-MNIST.</figcaption>
+</center>
+</figure>
+
