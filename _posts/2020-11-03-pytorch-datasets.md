@@ -2,23 +2,24 @@
 layout: post
 title: "PyTorch Datasets"
 description: ""
-tags: pytorch datasets classification
-date: 2020-11-03
+tags: pytorch datasets classification covid19
+date: 2021-02-16
 ---
+
+> PyTorch dataset loader for image, text, malware classification, and healthcare datasets.
 
 I have been using the same sets of datasets due to the nature of my research
 being more on the exploratory side rather than the real-world applications of deep
 learning. In each of them, I have always written a somewhat _boilerplate_ code
-for loading datasets and creating data loaders for my models.
+for loading datasets and for creating data loaders for my models.
 
-So, I decided to write my own Python library for loading datasets and creating
+So, I decided to write my own Python library for loading datasets and for creating
 data loaders for them, one which I can reuse in my projects. I use image
-classification datasets for most of the models I try to learn, and/or to modify or
-improve. Hence, I started filling in my library with the standard image
-classification datasets such as [MNIST](https://pytorch.org/docs/stable/torchvision/datasets.html#mnist), [Fashion-MNIST](https://pytorch.org/docs/stable/torchvision/datasets.html#fashion-mnist), [EMNIST-Balanced](https://pytorch.org/docs/stable/torchvision/datasets.html#emnist), [CIFAR10](https://pytorch.org/docs/stable/torchvision/datasets.html#cifar),
+classification datasets for most of the models I try to learn and/or to improve. Hence, I started filling in my library with the standard image
+classification datasets such as [MNIST](https://pytorch.org/docs/stable/torchvision/datasets.html#mnist), [Fashion-MNIST](https://pytorch.org/docs/stable/torchvision/datasets.html#fashion-mnist), [EMNIST-Balanced](https://pytorch.org/docs/stable/torchvision/datasets.html#emnist), [KMNIST](https://github.com/rois-codh/kmnist), [CIFAR10](https://pytorch.org/docs/stable/torchvision/datasets.html#cifar),
 and [SVHN](https://pytorch.org/docs/stable/torchvision/datasets.html#svhn). But
 in case I wanted to use other datasets, I started adding in non-image
-classification datasets such as [AG News](http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html), [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/), and [Malware Classification](https://github.com/AFAgarap/malware-classification).
+classification datasets such as [AG News](http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html), [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/), [Malware Classification](https://github.com/AFAgarap/malware-classification), [Wisconsin Diagnostic Breast Cancer](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)), and [COVID19](https://github.com/lindawangg/COVID-Net).
 
 {% highlight python %}
 from pt_datasets import load_dataset, create_dataloader
