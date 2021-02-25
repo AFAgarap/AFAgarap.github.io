@@ -196,6 +196,14 @@ If you enjoyed reading this article, perhaps you will also find my blog on [Impl
 
 Recommended citation,
 
+- MLA
+
+```
+Agarap, Abien Fred M. “Avoiding the Vanishing Gradients Problem Using Gradient Noise Addition.” 5 Sept. 2019, https://afagarap.github.io/2019/09/05/avoiding-vanishing-gradients.html. 
+```
+
+- BibTeX
+
 ```
 @article{agarap2019avoiding,
     title="Avoiding the vanishing gradients problem using gradient noise addition",
