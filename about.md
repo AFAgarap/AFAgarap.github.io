@@ -33,6 +33,9 @@ Abien Fred Agarap, Arnulfo P. Azcarraga (IJCNN 2020)
 
 These projects were done as a pastime and as course projects.
 
+**Text Classification and Clustering with Annealing Soft Nearest Neighbor Loss**<br>
+Used the annealing soft nearest neighbor loss for AG News dataset classification and clustering.<br>**Link:** [findings](https://www.researchgate.net/publication/348050060_Text_Classification_and_Clustering_with_Annealing_Soft_Nearest_Neighbor_Loss), code (soon!).
+
 **Statistical analysis on e-commerce reviews, with sentiment classification using bidirectional recurrent neural network (RNN)**<br>
 Performed statistical analysis and sentiment classification on [women's e-commerce clothing reviews dataset](https://www.kaggle.com/nicapotato/womens-ecommerce-clothing-reviews).<br>**Links:** [arXiv.org](https://arxiv.org/abs/1805.03687), [code](https://github.com/AFAgarap/ecommerce-reviews-analysis).
 
