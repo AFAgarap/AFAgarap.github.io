@@ -21,7 +21,7 @@ and was a part of the Philippine Team to the Intel International Science and
 Engineering Fair (Intel ISEF) 2013 in Phoenix, Arizona, UA. In July 2018, I
 qualified as one of the 24 participants out of 562 applicants worldwide (4.2%
 acceptance rate) for the Google TensorFlow Deep Learning Camp in Jeju Island,
-South Korea, where I was mentored by Dr. Yu-Han Liui, Developer Programs
+South Korea, where I was mentored by Dr. Yu-Han Liu, Developer Programs
 Engineer for Machine Learning and Big Data at Google. I have published papers
 in international conference proceedings by ACM, IEEE, and Springer.
 
