@@ -44,8 +44,7 @@ If you are interested in communicating with me, my e-mail address is abienfred.a
 Representations (IJCNN 2020, Acceptance rate: 26.43%)
 <br>- k-Winners-Take-All Ensemble Neural Network (ICONIP 2021, Acceptance rate:
 20.88%)
-<br>- Mixture of Experts with Soft Nearest Neighbor Loss (Under review for
-IJCNN 2022)
+<br>- Mixture of Experts with Soft Nearest Neighbor Loss (Accepted at IJCNN 2022)
 
 ## Latest Publication
 
