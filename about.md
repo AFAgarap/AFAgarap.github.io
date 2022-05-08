@@ -18,7 +18,7 @@ Sciences, and by having served in the Network of ISEF Alumni Philippines.
 
 I was a recipient of the Intel Excellence in Computer Science award in 2013,
 and was a part of the Philippine Team to the Intel International Science and
-Engineering Fair (Intel ISEF) 2013 in Phoenix, Arizona, UA. In July 2018, I
+Engineering Fair (Intel ISEF) 2013 in Phoenix, Arizona, USA. In July 2018, I
 qualified as one of the 24 participants out of 562 applicants worldwide (4.2%
 acceptance rate) for the Google TensorFlow Deep Learning Camp in Jeju Island,
 South Korea, where I was mentored by Dr. Yu-Han Liu, Developer Programs
