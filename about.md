@@ -9,8 +9,8 @@ researcher focusing on deep learning and representation learning, with an
 engineering background on computer vision, natural language processing, and
 machine learning. I got my Master of Science in Computing Science degree
 from De La Salle University - Manila (DLSU Manila), where I was supervised by
-Dr. Arnulfo P. Azcarraga. I am currently working as a Team Lead at Augmented
-Intelligence Pros (AI-Pros), Inc. Previously, I was the Lead Research Scientist
+Dr. Arnulfo P. Azcarraga. I am currently working as a Team Lead at a confidential company.
+Previously, I was the Lead Research Scientist
 at Senti AI. Aside from my professional and academic careers, I contributed to
 non-profit organizations that help strengthen pre-college scientific research
 by having served as a Junior Academy Mentor at the New York Academy of
