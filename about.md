@@ -64,7 +64,7 @@ Abien Fred Agarap, Arnulfo P. Azcarraga (IJCNN 2020, Acceptance rate: 26.43%)
 
 
 ## Work Experience
-- **Augmented Intelligence Pros, Inc.**<br>Since August 2019
+- **Confidential**<br>Since August 2019
 - **Lead Research Scientist, Senti Techlabs Inc.**<br>August 2018 to July 2019
 - **Mentee, Google Deep Learning Camp 2018**<br>Jeju, South Korea -- June 2018 to August 2018
 - **Research Scientist, Senti Techlabs Inc.**<br>May 2018 to July 2018
