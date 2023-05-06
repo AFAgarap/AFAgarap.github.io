@@ -3,7 +3,7 @@ author:
   name: AFAgarap
   email: "abienfred.agarap@gmail.com"
 description: > # this means to ignore newlines until "show_excerpts:"
-  MS Computing student at De La Salle University
+    deep learning researcher
 show_excerpts: true # set to true to show excerpts on the homepage
 baseurl: ""
 url: ""
@@ -15,7 +15,6 @@ minima:
 
   # generate social links in footer
   social_links:
-    twitter: afagarap
     github:  afagarap
     stackoverflow: "6838049"
     instagram: afagarap
