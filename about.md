@@ -28,7 +28,7 @@ in international conference proceedings by ACM, IEEE, and Springer.
 Under Dr. Azcarraga's supervision, I worked on my thesis entitled "Self-Organizing
 Cooperative Neural Network Experts", and it was given the Gold Medal
 for the Most Outstanding Thesis Award at DLSU Manila.
-     
+
 If you are interested in communicating with me, my e-mail address is abienfred.agarap[at]gmail.com. Thank you for visiting!
 
 ## Education
